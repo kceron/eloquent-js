@@ -22,23 +22,18 @@ function sum(numsArr) {
 // Your code here.
 function range(start, end, step = 1) {
   let arr = [];
-  let stepVal;
-  if ((step = 1)) {
-    stepVal = 1;
-    for (let i = start; i <= end; i++) {
+  if (step < 0) {
+    for (let i = start; i >= end; i += step) {
       arr.push(i);
     }
-    return arr;
   } else {
-    stepVal = step;
-    for (let i = start; i <= end; i++) {
-      arr.push(i + stepVal);
+    for (let i = start; i <= end; i += step) {
+      arr.push(i);
     }
-    return arr;
   }
+  return arr;
 }
 // console.log(range(1,10,2))
 // [1,3,5,7,9]
-
 // console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
