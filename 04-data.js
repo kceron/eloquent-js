@@ -52,7 +52,12 @@ function reverseArray(arr) {
 // → ["C", "B", "A"];
 
 let arrayValue = [1, 2, 3, 4, 5];
-function reverseArrayInPlace(arr) {}
+function reverseArrayInPlace(arr) {
+  let arrLength = arr.length;
+  for (i = 0; i < arrLength; i++) {
+    arr.splice(i, 0, arr.pop());
+  }
+}
 reverseArrayInPlace(arrayValue);
 // console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
