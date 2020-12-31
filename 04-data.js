@@ -52,8 +52,7 @@ function reverseArray(arr) {
 
 let arrayValue = [1, 2, 3, 4, 5];
 function reverseArrayInPlace(arr) {
-  let arrLength = arr.length;
-  for (i = 0; i < arrLength; i++) {
+  for (i = 0; i < arr.length; i++) {
     arr.splice(i, 0, arr.pop());
   }
 }
