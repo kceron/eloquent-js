@@ -39,7 +39,6 @@ function range(start, end, step = 1) {
 // → [5, 4, 3, 2]
 
 // For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument by reversing its elements. Neither may use the standard reverse method.
-
 // Your code here.
 function reverseArray(arr) {
   let newArr = [];
