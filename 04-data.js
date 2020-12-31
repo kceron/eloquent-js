@@ -45,11 +45,11 @@ function reverseArray(arr) {
   let newArr = [];
   for (let i = arr.length - 1; i > 0; i--) {}
 }
-console.log(reverseArray(["A", "B", "C"]));
+// console.log(reverseArray(["A", "B", "C"]));
 // → ["C", "B", "A"];
 
 let arrayValue = [1, 2, 3, 4, 5];
 function reverseArrayInPlace(arr) {}
 reverseArrayInPlace(arrayValue);
-console.log(arrayValue);
+// console.log(arrayValue);
 // → [5, 4, 3, 2, 1]
