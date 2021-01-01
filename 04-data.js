@@ -73,7 +73,7 @@ function arrayToList(arr) {
 // console.log(arrayToList([10, 20]));
 // → {value: 10, rest: {value: 20, rest: null}}
 
-function listToArray() {
+function listToArray(list) {
   let array = [];
   while (list != null) {
     array.push(list.value);
