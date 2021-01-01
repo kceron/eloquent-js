@@ -109,3 +109,33 @@ function nthRecursive(list, number) {
   }
 }
 // console.log(nthRecursive(arrayToList([10, 20, 30]), 1));
+
+// Write a function deepEqual that takes two values and returns true only if they are the same value or are objects with the same properties, where the values of the properties are equal when compared with a recursive call to deepEqual.
+// Your code here.
+function deepEqual(obj1, obj2) {
+  if (obj1 === obj2)
+    // it's just the same object. No need to compare.
+    return true;
+  if (isPrimitive(obj1) && isPrimitive(obj2))
+    // compare primitives
+    return obj1 === obj2;
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false; // compare objects with same number of keys
+  for (let key in obj1) {
+    if (!(key in obj2)) return false; //other object doesn't have this prop
+    if (!deepEqual(obj1[key], obj2[key])) return false;
+  }
+  return true;
+}
+
+//check if value is primitive
+function isPrimitive(obj) {
+  return obj !== Object(obj);
+}
+
+let obj = { here: { is: "an" }, object: 2 };
+// console.log(deepEqual(obj, obj));
+// → true
+// console.log(deepEqual(obj, { here: 1, object: 2 }));
+// → false
+// console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
+// → true
