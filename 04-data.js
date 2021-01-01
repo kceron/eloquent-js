@@ -84,10 +84,28 @@ function listToArray(list) {
 // console.log(listToArray(arrayToList([10, 20, 30])));
 // → [10, 20, 30]
 
-function prepend() {}
+function prepend(element, list) {
+  return {
+    value: element,
+    rest: list,
+  };
+}
 // console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 
-function nth() {}
+function nth(list, number) {
+  return listToArray(list)[number];
+}
 // console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
+
+function nthRecursive(list, number) {
+  if (number === 0) {
+    return list.value;
+  } else if (list.rest === null) {
+    return undefined;
+  } else {
+    return nthRecursive(list.rest, number - 1);
+  }
+}
+// console.log(nthRecursive(arrayToList([10, 20, 30]), 1));
