@@ -27,7 +27,7 @@ loop(3, n => n > 0, n => n - 1, console.log);
 // Implement every as a function that takes an array and a predicate function as parameters. Write two versions, one using a loop and one using the some method.
 function every(array, predicate) {
   // Your code here.
-    for (let element of array) {
+  for (let element of array) {
     if (!predicate(element)) return false;
   }
   return true;
